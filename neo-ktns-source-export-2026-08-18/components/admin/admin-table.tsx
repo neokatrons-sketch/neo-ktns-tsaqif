@@ -1,0 +1,3 @@
+export function AdminTable({ columns, rows }: { columns: string[]; rows: React.ReactNode[][] }) {
+  return <div className="surface overflow-x-auto rounded-[var(--radius-md)]"><table className="w-full min-w-[680px] text-left text-sm"><thead><tr className="border-b border-[var(--border)]">{columns.map((column) => <th className="px-5 py-4 text-xs font-semibold uppercase tracking-[.1em] text-muted" key={column}>{column}</th>)}</tr></thead><tbody className="divide-y divide-[var(--border)]">{rows.map((row, rowIndex) => <tr key={rowIndex}>{row.map((cell, cellIndex) => <td className="px-5 py-4" key={cellIndex}>{cell}</td>)}</tr>)}</tbody></table></div>;
+}
